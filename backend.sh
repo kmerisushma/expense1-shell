@@ -41,6 +41,14 @@ if [ $? -eq 0 ]; then
     echo -e "\e[31m FAIL \e[0m"
 fi
 
+echo -e "${color} Delete old application directory \e[0m"
+rm -rf /app/* &>>$log_file
+if [ $? -eq 0 ]; then
+   echo -e "\e[32m SUCCESS \e[0m"
+  else
+    echo -e "\e[31m FAIL \e[0m"
+fi
+
 echo -e "${color} create application directory \e[0m"
 mkdir /app &>>$log_file
 if [ $? -eq 0 ]; then
@@ -49,13 +57,7 @@ if [ $? -eq 0 ]; then
     echo -e "\e[31m FAIL \e[0m"
 fi
 
-echo -e "${color} Delete old application directory \e[0m"
-rm -rf /app/* &>>$log_file
-if [ $? -eq 0 ]; then
-   echo -e "\e[32m SUCCESS \e[0m"
-  else
-    echo -e "\e[31m FAIL \e[0m"
-fi
+
 
 echo -e "${color} Download application content \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>$log_file
