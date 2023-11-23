@@ -1,4 +1,3 @@
-
 dnf install nginx -y
 
 cp expense.conf /etc/nginx/default.d/expense.conf
