@@ -1,5 +1,4 @@
-log_file=/tmp/expense.log
-color="\e[36m"
+source common.sh
 
 echo -e "${color} Installing Nginx \e[0m"
 dnf install nginx -y &>>log_file
