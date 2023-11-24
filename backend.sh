@@ -38,6 +38,7 @@ if [ $? -ne 0 ];then
   echo -e "${color} Add Application user \e[0m"
 useradd expense &>>$log_file
 status_check
+fi
 
 if [ ! -d /app ]; then
   echo -e "${color} create application directory \e[0m"
