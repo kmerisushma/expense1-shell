@@ -19,7 +19,7 @@ echo $?
 
 echo -e "${color} Extract Downloaded application Content \e[0m"
 cd /usr/share/nginx/html &>>log_file
- unzip /tmp/frontend.zip &>>log_file
+unzip /tmp/frontend.zip &>>log_file
 echo $?
 
 echo -e "${color} Starting Nginx Service  \e[0m"
