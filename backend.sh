@@ -67,7 +67,7 @@ dnf install mysql -y &>>$log_file
 status_check
 
 echo -e "${color} Load Schema \e[0m"
-mysql -h mysql-dev.sushma143.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$log_file
+mysql -h mysql-dev.sushma143.online -uroot -p${MYSQL_ROOT_PASSWORD}  /app/schema/backend.sql &>>$log_file
 status_check
 
 echo -e "${color} Starting backend service \e[0m"
